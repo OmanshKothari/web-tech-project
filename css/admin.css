@@ -37,7 +37,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #f8eee7;
+  background-color: #E6E6E6;
 }
 
 a {
@@ -59,6 +59,10 @@ a {
 .clearfix{
   float: none;
   clear: both;
+}
+
+.display{
+  padding-left: 5.8rem;
 }
 
 /* CSS for Menu */
@@ -88,7 +92,7 @@ a {
   padding: 3% 0;
 }
 
-.main-content h2 {
+.main-content h2,h1, h3 {
   padding-left: 5.8rem;
 }
 
@@ -107,7 +111,7 @@ a {
 }
 
 .mc-bg {
-  background-color: #57bc90;
+  background-color: #FEF1E6;
 }
 
 /* CSS for footer */
@@ -115,3 +119,88 @@ a {
   background-color: #4abdac;
   font-weight: bold;
 }
+
+
+/* CSS for tables [to display records in each admin-page] */
+
+.main-content table{
+  width: 80%;
+  font-size: 90%;
+  margin: 0 auto;
+}
+
+.main-content table tr th{
+  border-bottom: 1px solid black;
+  padding: 1%;
+  text-align: left;
+}
+
+.main-content table tr td{
+  padding: 1%;
+}
+
+/* 
+CSS for Action Buttons 
+btn-primary - blue
+btn-secondary - green
+btn-danger - red
+*/
+
+.btn-container{
+  padding: 1%;
+  width: 80%;
+  margin: 1% auto;
+}
+
+.btn-primary{
+  background-color: #3D2C8D;
+  padding: 1%;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 0.001px solid black;
+  border-radius: 3px;
+}
+
+.btn-primary:hover{
+  background-color: #1C0C5B;
+}
+.btn-secondary{
+  background-color: #6166B3;
+  padding: 1%;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 0.001px solid black;
+  border-radius: 3px;
+}
+
+.btn-secondary:hover{
+  background-color: #544179;
+}
+.btn-danger{
+  background-color: #ff4b1edc;
+  padding: 1%;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 0.001px solid black;
+  border-radius: 3px;
+}
+
+.btn-danger:hover{
+  background-color: #e92222;
+}
+
+/* CSS for adding admin form */
+
+.main-content form table {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 3%;
+  border: 1px solid black;
+  background-color: #B1E693;
+  padding: 1%;
+}
+
+

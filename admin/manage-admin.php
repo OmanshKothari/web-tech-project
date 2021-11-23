@@ -4,7 +4,70 @@ include('partials/header.php');
 <!-- Main Content Section Starts -->
 <div class="main-content  mc-bg wrapper">
     <div class="box-container">
-        <h2>Manage Admin</h2>       
+        <h1>Manage Admin</h1>
+        <!-- Button to add admin -->
+        <div class='btn-container'><a href="add-admin.php" class="btn-primary">Add Admin</a></div>
+        <div class="text-center">
+            <?php
+            if (isset($_SESSION['add_admin'])) {
+                echo "<h3>" . $_SESSION['add_admin'] . "</h3>"; // Displaying Session Message
+                unset($_SESSION['add_admin']);
+                // Removes the variable from the session variables so that message is displayed only once
+            }
+            ?>
+        </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Username</th>
+                <th>Actions</th> <!-- This will have buttons like update, remove etc. -->
+            </tr>
+
+            <?php
+            // SQL query to get all the rows from database
+            $sql = "SELECT * FROM tb_admin";
+            // Executing the query
+            $res = mysqli_query($conn, $sql);
+            // Counting the number of rows in database
+            $count = mysqli_num_rows($res);
+
+            // Create a Serial number variable
+            $sn = 1;
+
+            if ($count > 0) {
+                // Meaning the database is not empty
+                while ($rows = mysqli_fetch_assoc($res)) {
+                    // using while loop to get records from database
+                    // loop will run as long as we have rows in database
+
+                    // Getting the data
+
+                    $id = $rows['id'];
+                    $full_name = $rows['full_name'];
+                    $username = $rows['username'];
+
+
+                    // Display value in table
+            ?>
+                    <tr>
+                        <td><?php echo $sn;?></td>
+                        <td><?php echo $full_name;?></td>
+                        <td><?php echo $username;?></td>
+                        <td>
+                            <a href="#" class="btn-secondary">Update Admin</a>
+                            <a href="#" class="btn-danger">Delete Admin</a>
+                        </td>
+                    </tr>
+            <?php
+                $sn++;
+                }
+            }
+            else{
+                // Database is empty
+            }
+            ?>
+        </table>
     </div>
 </div>
 <?php
