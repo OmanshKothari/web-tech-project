@@ -11,21 +11,49 @@
 
 <body>
     <!-- Menu Section Starts -->
-    <div class="menu">
-        <div class="wrapper">
-            Menu Goes Here
+    <div class="menu text-center">
+        <div class="wrapper m-bg">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">Home</a>
+                <a href="#">categories</a>
+                <a href="#">Home</a>
+            </div>
         </div>
     </div>
     <!-- Main Content Section Starts -->
-    <div class="main-content">
-        <div class="wrapper">
-            Main Content Goes Here
+    <div class="main-content  mc-bg wrapper">
+        <div class="box-container">
+            <h2>Dashboard</h2>
+            <div class="box col-4 text-center">
+                <h3>5</h3>
+                <br>
+                <p>Categories</p>
+            </div>
+            <div class="box col-4 text-center">
+                <h3>5</h3>
+                <br>
+                <p>Categories</p>
+            </div>
+            <div class="box col-4 text-center">
+                <h3>5</h3>
+                <br>
+                <p>Categories</p>
+            </div>
+            <div class="box col-4 text-center">
+                <h3>5</h3>
+                <br>
+                <p>Categories</p>
+            </div>
+            <div class="clearfix"></div>
         </div>
     </div>
     <!-- Footer Goes Here -->
     <div class="footer">
-        <div class="wrapper">
-            Footer Goes Here
+        <div class="wrapper  text-center f-bg">
+            <p>2021 All Rights Reserved, Plant-Mart.</p>
+            <p> Developed by - <a href="#">TEAM</a></p>
         </div>
     </div>
 </body>

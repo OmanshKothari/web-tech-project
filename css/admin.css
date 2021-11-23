@@ -6,7 +6,7 @@ Version : 1.2
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap");
 
 * {
-  font-family: "Playfair" "sans-serif";
+  font-family: "Playfair Display";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,7 +18,6 @@ Version : 1.2
 }
 
 html {
-  font-size: 62.5%;
   overflow-x: hidden;
   scroll-padding-top: 9rem;
   scroll-behavior: smooth;
@@ -37,6 +36,82 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 
+body {
+  background-color: #f8ee7;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .wrapper {
-  border: 1px solid red;
+  border: 0.1px solid black;
+  border-radius: 5px;
+  padding: 1%;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clearfix{
+  float: none;
+  clear: both;
+}
+
+/* CSS for Menu */
+.links {
+  display: flex;
+  font-size: 1.05rem;
+  padding: 1.8rem;
+  margin: 0 10%;
+  justify-content: space-evenly;
+}
+
+.links a {
+  color: #0e0b16;
+}
+
+.links a:hover {
+  border-bottom: 0.5px solid #fc4a1a;
+}
+
+.m-bg {
+  background-color: #caebf2;
+}
+
+/* CSS for main-content */
+.main-content {
+  margin: 0.35% 0;
+  padding: 3% 0;
+}
+
+.main-content h2 {
+  padding-left: 5.8rem;
+}
+
+.main-content .box-container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.col-4{
+  border: 0.5px solid black;
+  width: 23%;
+  background-color: antiquewhite;
+  float: left;
+  margin: 1%;
+  padding: 1%;
+}
+
+.mc-bg {
+  background-color: #57bc90;
+}
+
+/* CSS for footer */
+.f-bg {
+  background-color: #4abdac;
+  font-weight: bold;
 }
