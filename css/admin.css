@@ -13,7 +13,6 @@ Version : 1.2
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
   transition: 0.2s linear;
 }
 
@@ -72,6 +71,7 @@ a {
   padding: 1.8rem;
   margin: 0 10%;
   justify-content: space-evenly;
+  text-transform: capitalize;
 }
 
 .links a {
@@ -93,6 +93,7 @@ a {
 }
 
 .main-content h2,h1, h3 {
+  text-transform: capitalize;
   padding-left: 5.8rem;
 }
 
@@ -194,6 +195,10 @@ btn-danger - red
 
 /* CSS for adding admin form */
 
+#manage-form{
+  text-transform: none;
+}
+
 .main-content form table {
   width: 60%;
   margin: 0 auto;
@@ -202,5 +207,3 @@ btn-danger - red
   background-color: #B1E693;
   padding: 1%;
 }
-
-
