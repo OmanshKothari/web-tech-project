@@ -17,6 +17,11 @@ include('partials/header.php')
                 unset($_SESSION['add_category']);
                 // Removes the variable from the session variables so that message is displayed only once
             }
+            if (isset($_SESSION['delete'])) {
+                echo "<h3>" . $_SESSION['delete'] . "</h3>"; // Displaying Session Message
+                unset($_SESSION['delete']);
+                // Removes the variable from the session variables so that message is displayed only once
+            }
             ?>
         </div>
         <br>
@@ -66,7 +71,7 @@ include('partials/header.php')
                         <td><?php echo $active; ?></td>
                         <td>
                             <a href="#" class="btn-secondary">Update Category</a>
-                            <a href="#" class="btn-danger">Delete Category</a>
+                            <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id?>" class="btn-danger">Delete Category</a>
                         </td>
                     </tr>
             <?php
