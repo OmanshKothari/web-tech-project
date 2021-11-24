@@ -5,6 +5,21 @@ include('partials/header.php')
 <div class="main-content  mc-bg wrapper">
     <div class="box-container">
         <h2>Manage Orders</h2>
+
+        <br>
+        <!-- Displaying Session message for Deleting Order -->
+        <div class="text-center">
+            <?php
+            if (isset($_SESSION['delete'])) {
+                $class = $_GET['class'];
+                echo "<h3 class='$class'>" . $_SESSION['delete'] . "</h3>"; // Displaying Session Message
+                unset($_SESSION['delete']);
+                // Removes the variable from the session variables so that message is displayed only once
+            }
+            ?>
+        </div>
+        <br>
+        <br>
         <table id="tb-order">
             <tr>
                 <th>S.No.</th>
@@ -68,7 +83,7 @@ include('partials/header.php')
                         <td><?php echo $customer_address; ?></td>
                         <td>
                             <a href="#" class="btn-secondary">Update Category</a>
-                            <a href="#" class="btn-danger">Delete Category</a>
+                            <a href="<?php echo SITEURL; ?>admin/delete-order.php?id=<?php echo $id ?>" class="btn-danger">Delete Category</a>
                         </td>
                     </tr>
             <?php

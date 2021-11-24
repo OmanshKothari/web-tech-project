@@ -13,8 +13,14 @@ include('partials/header.php')
         <div class="text-center">
             <?php
             if (isset($_SESSION['add_food'])) {
-                echo "<h3>" . $_SESSION['add_food'] . "</h3>"; // Displaying Session Message
+                echo "<h3 class='success'>" . $_SESSION['add_food'] . "</h3>"; // Displaying Session Message
                 unset($_SESSION['add_food']);
+                // Removes the variable from the session variables so that message is displayed only once
+            }
+            if (isset($_SESSION['delete'])) {
+                $class = $_GET['class'];
+                echo "<h3 class='$class'>" . $_SESSION['delete'] . "</h3>"; // Displaying Session Message
+                unset($_SESSION['delete']);
                 // Removes the variable from the session variables so that message is displayed only once
             }
             ?>
@@ -75,7 +81,7 @@ include('partials/header.php')
                         <td><?php echo $active; ?></td>
                         <td>
                             <a href="#" class="btn-secondary">Update Category</a>
-                            <a href="#" class="btn-danger">Delete Category</a>
+                            <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id ?>" class="btn-danger">Delete Category</a>
                         </td>
                     </tr>
             <?php

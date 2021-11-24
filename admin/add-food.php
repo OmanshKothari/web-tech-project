@@ -9,7 +9,7 @@ include('partials/header.php')
         <div class="text-center">
             <?php
             if (isset($_SESSION['add_food'])) {
-                echo "<h3>" . $_SESSION['add_food'] . "</h3>"; // Displaying Session Message
+                echo "<h3 class='failure'>" . $_SESSION['add_food'] . "</h3>"; // Displaying Session Message
                 unset($_SESSION['add_food']);
                 // Removes the variable from the session variables so that message is displayed only once
             }

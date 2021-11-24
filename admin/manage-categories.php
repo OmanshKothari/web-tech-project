@@ -13,12 +13,13 @@ include('partials/header.php')
         <div class="text-center">
             <?php
             if (isset($_SESSION['add_category'])) {
-                echo "<h3>" . $_SESSION['add_category'] . "</h3>"; // Displaying Session Message
+                echo "<h3 class='success'>" . $_SESSION['add_category'] . "</h3>"; // Displaying Session Message
                 unset($_SESSION['add_category']);
                 // Removes the variable from the session variables so that message is displayed only once
             }
             if (isset($_SESSION['delete'])) {
-                echo "<h3>" . $_SESSION['delete'] . "</h3>"; // Displaying Session Message
+                $class = $_GET['class'];
+                echo "<h3 class='$class'>" . $_SESSION['delete'] . "</h3>"; // Displaying Session Message
                 unset($_SESSION['delete']);
                 // Removes the variable from the session variables so that message is displayed only once
             }
