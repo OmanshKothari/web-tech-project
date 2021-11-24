@@ -67,7 +67,8 @@ a {
 /* CSS for Menu */
 .links {
   display: flex;
-  font-size: 1.05rem;
+  font-weight: bold;
+  font-size: 1.15rem;
   padding: 1.8rem;
   margin: 0 10%;
   justify-content: space-evenly;
@@ -128,12 +129,15 @@ a {
   width: 80%;
   font-size: 90%;
   margin: 0 auto;
+  border: 1px solid black;
+  font-weight: 600;
 }
 
 .main-content table tr th{
-  border-bottom: 1px solid black;
+  font-size: 1.07rem;
   padding: 1%;
   text-align: left;
+  border-bottom: 1px solid black;
 }
 
 .main-content table tr td{
@@ -206,4 +210,11 @@ btn-danger - red
   border: 1px solid black;
   background-color: #B1E693;
   padding: 1%;
+}
+
+
+/* CSS for order table */
+
+#tb-order{
+  font-size: small;
 }

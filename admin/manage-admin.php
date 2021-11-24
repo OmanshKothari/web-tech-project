@@ -14,6 +14,11 @@ include('partials/header.php');
                 unset($_SESSION['add_admin']);
                 // Removes the variable from the session variables so that message is displayed only once
             }
+            elseif (isset($_SESSION['delete'])) {
+                echo "<h3>" . $_SESSION['delete'] . "</h3>"; // Displaying Session Message
+                unset($_SESSION['delete']);
+                // Removes the variable from the session variables so that message is displayed only once
+            }
             ?>
         </div>
         <table>
@@ -56,7 +61,7 @@ include('partials/header.php');
                         <td><?php echo $username;?></td>
                         <td>
                             <a href="#" class="btn-secondary">Update Admin</a>
-                            <a href="#" class="btn-danger">Delete Admin</a>
+                            <a href="<?php echo SITEURL;?>admin/delete-admin.php?id=<?php echo $id;?>" class="btn-danger">Delete Admin</a>
                         </td>
                     </tr>
             <?php
