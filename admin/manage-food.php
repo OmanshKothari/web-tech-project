@@ -80,8 +80,8 @@ include('partials/header.php')
                         <td><?php echo $featured; ?></td>
                         <td><?php echo $active; ?></td>
                         <td>
-                            <a href="#" class="btn-secondary">Update Category</a>
-                            <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id ?>" class="btn-danger">Delete Category</a>
+                            <a href="#" class="btn-secondary">Update Food</a>
+                            <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id ?>" class="btn-danger">Delete Food</a>
                         </td>
                     </tr>
             <?php

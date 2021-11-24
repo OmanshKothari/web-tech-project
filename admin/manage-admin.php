@@ -14,14 +14,22 @@ include('partials/header.php');
                 unset($_SESSION['add_admin']);
                 // Removes the variable from the session variables so that message is displayed only once
             }
-            elseif (isset($_SESSION['delete'])) {
+            if (isset($_SESSION['delete'])) {
                 $class = $_GET['class'];
                 echo "<h3 class='$class'>" . $_SESSION['delete'] . "</h3>"; // Displaying Session Message
                 unset($_SESSION['delete']);
                 // Removes the variable from the session variables so that message is displayed only once
             }
+            if (isset($_SESSION['update'])) {
+                $class = $_GET['class'];
+                echo "<h3 class='$class'>" . $_SESSION['update'] . "</h3>"; // Displaying Session Message
+                unset($_SESSION['update']);
+                // Removes the variable from the session variables so that message is displayed only once
+            }
             ?>
         </div>
+        <br>
+        <br>
         <table>
             <tr>
                 <th>ID</th>
@@ -61,7 +69,7 @@ include('partials/header.php');
                         <td><?php echo $full_name;?></td>
                         <td><?php echo $username;?></td>
                         <td>
-                            <a href="#" class="btn-secondary">Update Admin</a>
+                            <a href="<?php echo SITEURL;?>admin/update-admin.php?id=<?php echo $id;?>" class="btn-secondary">Update Admin</a>
                             <a href="<?php echo SITEURL;?>admin/delete-admin.php?id=<?php echo $id;?>" class="btn-danger">Delete Admin</a>
                         </td>
                     </tr>

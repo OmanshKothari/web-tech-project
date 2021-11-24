@@ -68,7 +68,7 @@ include('partials/header.php')
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" name="submit" value="Add Category" class="btn-primary">
+                        <input type="submit" name="submit" value="Add Food" class="btn-primary">
                     </td>
                 </tr>
             </table>
