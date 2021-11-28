@@ -37,7 +37,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 a {
@@ -56,12 +56,12 @@ a {
   text-align: center;
 }
 
-.clearfix{
+.clearfix {
   float: none;
   clear: both;
 }
 
-.display{
+.display {
   padding-left: 5.8rem;
 }
 
@@ -94,17 +94,19 @@ a {
   padding: 3% 0;
 }
 
-.main-content h2,h1, h3 {
+.main-content h2,
+h1,
+h3 {
   text-transform: capitalize;
   padding-left: 5.8rem;
 }
 
-.main-content .box-container{
+.main-content .box-container {
   width: 80%;
   margin: 0 auto;
 }
 
-.col-4{
+.col-4 {
   border: 0.5px solid black;
   width: 23%;
   background-color: antiquewhite;
@@ -114,7 +116,7 @@ a {
 }
 
 .mc-bg {
-  background-color: #FEF1E6;
+  background-color: #fef1e6;
 }
 
 /* CSS for footer */
@@ -123,10 +125,9 @@ a {
   font-weight: bold;
 }
 
-
 /* CSS for tables [to display records in each admin-page] */
 
-.main-content table{
+.main-content table {
   width: 80%;
   font-size: 90%;
   margin: 0 auto;
@@ -134,14 +135,14 @@ a {
   font-weight: 600;
 }
 
-.main-content table tr th{
+.main-content table tr th {
   font-size: 1.07rem;
   padding: 1%;
   text-align: left;
   border-bottom: 1px solid black;
 }
 
-.main-content table tr td{
+.main-content table tr td {
   padding: 1%;
 }
 
@@ -152,14 +153,14 @@ btn-secondary - green
 btn-danger - red
 */
 
-.btn-container{
+.btn-container {
   padding: 1%;
   width: 80%;
   margin: 1% auto;
 }
 
-.btn-primary{
-  background-color: #3D2C8D;
+.btn-primary {
+  background-color: #3d2c8d;
   padding: 1%;
   color: white;
   text-decoration: none;
@@ -168,11 +169,11 @@ btn-danger - red
   border-radius: 3px;
 }
 
-.btn-primary:hover{
-  background-color: #1C0C5B;
+.btn-primary:hover {
+  background-color: #1c0c5b;
 }
-.btn-secondary{
-  background-color: #6166B3;
+.btn-secondary {
+  background-color: #6166b3;
   padding: 1%;
   color: white;
   text-decoration: none;
@@ -181,10 +182,10 @@ btn-danger - red
   border-radius: 3px;
 }
 
-.btn-secondary:hover{
+.btn-secondary:hover {
   background-color: #544179;
 }
-.btn-danger{
+.btn-danger {
   background-color: #ff4b1edc;
   padding: 1%;
   color: white;
@@ -194,13 +195,13 @@ btn-danger - red
   border-radius: 3px;
 }
 
-.btn-danger:hover{
+.btn-danger:hover {
   background-color: #e92222;
 }
 
 /* CSS for adding admin form */
 
-#manage-form{
+#manage-form {
   text-transform: none;
 }
 
@@ -209,31 +210,47 @@ btn-danger - red
   margin: 0 auto;
   margin-top: 3%;
   border: 1px solid black;
-  background-color: #B1E693;
+  background-color: #b1e693;
   padding: 1%;
 }
 
-
 /* CSS for order table */
 
-#tb-order{
+#tb-order {
   font-size: small;
 }
 
-.success{
+.success {
   width: 50%;
   margin: 0 auto;
-  color: #2FDD92;
+  color: #2fdd92;
   padding: 0.1%;
   border: 1px solid black;
   background-color: #544179;
 }
 
-.failure{
+.failure {
   width: 50%;
   margin: 0 auto;
-  color: #F90716;
+  color: #f90716;
   padding: 0.1%;
   border: 1px solid black;
-  background-color: #6166B3;
+  background-color: #6166b3;
+}
+
+/* CSS for login page */
+
+.login {
+  background-image: url("../images/login-bg.jfif");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.login-box {
+  width: 30%;
+  margin: 18% auto;
 }
