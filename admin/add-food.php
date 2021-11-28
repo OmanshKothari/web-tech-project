@@ -55,15 +55,15 @@ include('partials/header.php')
                 <tr>
                     <td>Featured : </td>
                     <td>
-                        <label for="featured">YES : </label><input type="checkbox" name="featured" value="YES">
-                        <label for="featured">NO : </label><input type="checkbox" name="featured" value="NO">
+                        <label for="featured">YES : </label><input type="radio" name="featured" value="YES">
+                        <label for="featured">NO : </label><input type="radio" name="featured" value="NO">
                     </td>
                 </tr>
                 <tr>
                     <td>Active : </td>
                     <td>
-                        <label for="active">YES : </label><input type="checkbox" name="active" value="YES">
-                        <label for="active">NO : </label><input type="checkbox" name="active" value="NO">
+                        <label for="active">YES : </label><input type="radio" name="active" value="YES">
+                        <label for="active">NO : </label><input type="radio" name="active" value="NO">
                     </td>
                 </tr>
                 <tr>
