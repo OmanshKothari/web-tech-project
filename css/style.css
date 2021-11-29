@@ -219,12 +219,15 @@ a {
 }
 
 .home{
+    margin-top: 1%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(../images/home-bg.png) no-repeat;
+    background: url(../images/small-plants-in-white-pots-im-1920x1080.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    border: var(--border);
+    border-radius: 1000px;
 }
 
 .home .content{
@@ -234,7 +237,7 @@ a {
 .home .content h3{
     font-size: 6rem;
     text-transform: uppercase;
-    color: #fff;
+    color: #000;
 }
 
 .home .content p{
@@ -242,7 +245,7 @@ a {
     font-weight:lighter;
     line-height: 1.8;
     padding: 1rem 0;
-    color: #eee;
+    color: #000;
 }
 
 .about .row{
