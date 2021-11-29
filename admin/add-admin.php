@@ -14,6 +14,12 @@ include('partials/header.php')
                 unset($_SESSION['add_admin']);
                 // Removes the variable from the session variables so that message is displayed only once
             }
+            if (isset($_SESSION['unique_user_error'])) {
+                $class = $_GET['class'];
+                echo "<h3 class='$class'>".$_SESSION['unique_user_error']."</h3>"; // Displaying Session Message
+                unset($_SESSION['unique_user_error']);
+                // Removes the variable from the session variables so that message is displayed only once
+            }
             ?>
         </div>
 
@@ -62,7 +68,18 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     // Encrypting password
     $password = md5($_POST['password']);
+    // SQL query to make sure the username is unique
+    $sql_unique_user = "SELECT * FROM tb_admin WHERE username = '$username'";
 
+    $res_unique_user = mysqli_query($conn, $sql_unique_user);
+
+    $count = mysqli_num_rows($res_unique_user);
+    if($count != 0){
+        $_SESSION['unique_user_error'] = "User Already Exists. Choose other username.";
+        // REDIRECT PAGE to manage-admin
+        header('location:' . SITEURL . 'admin/add-admin.php?class=failure');
+        die();
+    }
     // SQL query to save Data in Database
 
     $sql = "INSERT INTO tb_admin SET
