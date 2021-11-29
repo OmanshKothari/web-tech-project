@@ -26,8 +26,8 @@
         ?>
 
         <form action="" method="POST">
-            <input type="text" name="username" placeholder="Enter Username" autocomplete="off">
-            <input type="password" name="password" placeholder="Enter Password">
+            <input type="text" name="username" placeholder="Enter Username" autocomplete="off" maxlength="20">
+            <input type="password" name="password" placeholder="Enter Password" minlength="8" maxlength="20">
 
             <input type="submit" name="submit" value="Login" id="submit">
         </form>
