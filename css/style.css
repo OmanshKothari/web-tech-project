@@ -227,7 +227,7 @@ a {
     background-size: cover;
     background-position: center;
     border: var(--border);
-    border-radius: 1000px;
+    border-radius: 75px 75px 0 0;
 }
 
 .home .content{

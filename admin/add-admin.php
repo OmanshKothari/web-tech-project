@@ -28,19 +28,19 @@ include('partials/header.php')
                 <tr>
                     <td>Full Name : </td>
                     <td>
-                        <input type="text" name="full_name" placeholder="Enter Your Name ">
+                        <input type="text" name="full_name" placeholder="Enter Your Name " required>
                     </td>
                 </tr>
                 <tr>
                     <td>Username : </td>
                     <td>
-                        <input type="text" name="username" placeholder="Enter your username" maxlength="20">
+                        <input type="text" name="username" placeholder="Enter your username" maxlength="20" required>
                     </td>
                 </tr>
                 <tr>
                     <td>Password : </td>
                     <td>
-                        <input type="password" name="password" placeholder="Enter your password" minlength="8" maxlength="20">
+                        <input type="password" name="password" placeholder="Enter your password" minlength="8" maxlength="20" required>
                     </td>
                 </tr>
                 <tr>
