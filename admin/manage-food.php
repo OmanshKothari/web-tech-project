@@ -7,7 +7,7 @@ include('partials/header.php')
         <h2>Manage Food</h2>
 
         <!-- Button to add Food -->
-        <div class='btn-container'><a href="add-food.php" class="btn-primary">Add Food</a></div>
+        <div class='btn-container'><a href=<?php echo  SITEURL . "admin/add-food.php"?> class="btn-primary">Add Food</a></div>
         <br>
         <!-- Displaying Session message for adding food -->
         <div class="text-center">

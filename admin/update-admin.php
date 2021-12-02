@@ -1,5 +1,5 @@
 <?php
-include('partials/header.php')
+include('partials/header.php');
 ?>
 <?php
 // Get the id of the admin

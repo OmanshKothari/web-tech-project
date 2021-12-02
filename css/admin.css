@@ -63,6 +63,11 @@ a {
   padding-left: 5.8rem;
 }
 
+.material-icons{
+  display: none;
+  font-size: 48px;
+}
+
 /* CSS for Menu */
 .links {
   display: flex;
@@ -225,7 +230,7 @@ btn-danger - red
 /* CSS for order table */
 
 #tb-order {
-  font-size: small;
+  font-size: 0.5rem;
 }
 
 .success {
@@ -248,19 +253,3 @@ btn-danger - red
   background-color: #ff7518;
 }
 
-/* CSS for login page */
-
-.login {
-  background-image: url("../images/login-bg.jfif");
-  background-color: #cccccc;
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.login-box {
-  width: 30%;
-  margin: 18% auto;
-}

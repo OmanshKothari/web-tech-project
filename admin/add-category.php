@@ -1,5 +1,5 @@
 <?php
-include('partials/header.php')
+include('partials/header.php');
 ?>
 <!-- Main Content Section Starts -->
 <div class="main-content  mc-bg wrapper">
@@ -13,35 +13,40 @@ include('partials/header.php')
                 unset($_SESSION['add_category']);
                 // Removes the variable from the session variables so that message is displayed only once
             }
+            if (isset($_SESSION['upload'])) {
+                echo $_SESSION['upload'] ; // Displaying Session Message
+                unset($_SESSION['upload']);
+                // Removes the variable from the session variables so that message is displayed only once
+            }
             ?>
         </div>
-
-        <form action="" method="POST">
+            <!-- ADD Category Form starts -->
+        <form action="" method="POST" enctype="multipart/form-data">
             <table class="text-center">
                 <tr>
                     <td>Title : </td>
                     <td>
-                        <input type="text" name="title" placeholder="Enter Food Title ">
+                        <input type="text" name="title" placeholder="Enter Food Title " required>
                     </td>
                 </tr>
                 <tr>
-                    <td>Image name : </td>
+                    <td>Select Image : </td>
                     <td>
-                        <input type="text" name="image_name" placeholder="Enter Food Image Name">
+                        <input type="file" name="image" required>
                     </td>
                 </tr>
                 <tr>
                     <td>Featured : </td>
                     <td>
-                        <label for="featured-yes">YES : </label><input type="radio" name="featured" value="YES">
-                        <label for="featured-no">NO : </label><input type="radio" name="featured" value="NO">
+                        <label for="featured">YES : </label><input type="radio" name="featured" value="YES">
+                        <label for="featured">NO : </label><input type="radio" name="featured" value="NO">
                     </td>
                 </tr>
                 <tr>
                     <td>Active : </td>
                     <td>
-                        <label for="active-yes">YES : </label><input type="radio" name="active" value="YES">
-                        <label for="active-no">NO : </label><input type="radio" name="active" value="NO">
+                        <label for="active">YES : </label><input type="radio" name="active" value="YES">
+                        <label for="active">NO : </label><input type="radio" name="active" value="NO">
                     </td>
                 </tr>
                 <tr>
@@ -66,9 +71,52 @@ if (isset($_POST['submit'])) {
     // Button Clicked
 
     $title = $_POST['title'];
-    $image_name = $_POST['image_name'];
-    $featured = $_POST['featured'];
-    $active = $_POST['active'];
+
+    // Check Whether the image is selected or not and set the value for image name
+    if(isset($_FILES['image']['name'])){
+        // Upload the image
+        // To upload the image we need Source path, Destination path
+        
+        $image_name = $_FILES['image']['name'];
+        
+        // Auto Rename image
+        // Get the extension of image like .jpg/.png etc
+        $ext = end(explode('.', $image_name));
+
+        $image_name = time() . '.' . $ext;
+
+        $source = $_FILES['image']['tmp_name'];
+        
+        $destination = "../images/category/" . $image_name;
+
+        $upload = move_uploaded_file($source, $destination);
+
+        // Check for upload verification and if the image is not uploaded tehn we will stop the process and redirect with error message 
+
+        if($upload == False){
+            $_SESSION['upload'] = "<div class='failure'>Failed to Upload Image.</div>";
+            header('location'.SITEURL.'admin/add-category.php');
+            die();
+        }
+    }
+    else{
+        // Do not upload
+        $image_name = "No image selected.";
+    }
+    
+    if(isset($_POST['featured'])){
+        $featured = $_POST['featured'];
+    }
+    else{
+        $featured = "NO";
+    }
+    
+    if(isset($_POST['active'])){
+        $active = $_POST['active'];
+    }
+    else{
+        $active = "NO";
+    }
 
     // SQL query to save Data in Database
 

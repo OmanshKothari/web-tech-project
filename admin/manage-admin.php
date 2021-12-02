@@ -6,7 +6,7 @@ include('partials/header.php');
     <div class="box-container">
         <h1>Manage Admin</h1>
         <!-- Button to add admin -->
-        <div class='btn-container'><a href="add-admin.php" class="btn-primary">Add Admin</a></div>
+        <div class='btn-container'><a href=<?php echo  SITEURL . "admin/add-admin.php"?> class="btn-primary">Add Admin</a></div>
         <div class="text-center">
             <?php
             if (isset($_SESSION['add_admin'])) {

@@ -7,7 +7,7 @@ include('partials/header.php')
         <h2>Manage Categories</h2>
 
         <!-- Button to add Category -->
-        <div class='btn-container'><a href="add-category.php" class="btn-primary">Add Category</a></div>
+        <div class='btn-container'><a href=<?php echo  SITEURL . "admin/add-category.php"?> class="btn-primary">Add Category</a></div>
         <br>
         <!-- Displaying Session message for adding category -->
         <div class="text-center">
@@ -31,7 +31,7 @@ include('partials/header.php')
             <tr>
                 <th>S.No.</th>
                 <th>Title</th>
-                <th>Image_name</th>
+                <th>Image</th>
                 <th>Featured</th>
                 <th>Active</th>
                 <th>Actions</th> <!-- This will have buttons like update, remove etc. -->
@@ -67,7 +67,7 @@ include('partials/header.php')
                     <tr>
                         <td><?php echo $sn; ?></td>
                         <td><?php echo $title; ?></td>
-                        <td><?php echo $image_name; ?></td>
+                        <td><img src="../images/category/<?php echo $image_name; ?>" alt="<?php echo $image_name; ?>" width="100px" height="100px"></td>
                         <td><?php echo $featured; ?></td>
                         <td><?php echo $active; ?></td>
                         <td>
