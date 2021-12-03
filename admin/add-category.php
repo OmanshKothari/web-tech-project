@@ -69,9 +69,9 @@ include('partials/footer.php')
 
 if (isset($_POST['submit'])) {
     // Button Clicked
-
+    
     $title = $_POST['title'];
-
+    
     // Check Whether the image is selected or not and set the value for image name
     if(isset($_FILES['image']['name'])){
         // Upload the image
@@ -82,15 +82,15 @@ if (isset($_POST['submit'])) {
         // Auto Rename image
         // Get the extension of image like .jpg/.png etc
         $ext = end(explode('.', $image_name));
-
+        
         $image_name = time() . '.' . $ext;
 
         $source = $_FILES['image']['tmp_name'];
         
         $destination = "../images/category/" . $image_name;
-
+        
         $upload = move_uploaded_file($source, $destination);
-
+        
         // Check for upload verification and if the image is not uploaded tehn we will stop the process and redirect with error message 
 
         if($upload == False){
@@ -117,7 +117,7 @@ if (isset($_POST['submit'])) {
     else{
         $active = "NO";
     }
-
+    
     // SQL query to save Data in Database
 
     $sql = "INSERT INTO tb_category SET
@@ -132,7 +132,7 @@ if (isset($_POST['submit'])) {
     // Declaring variable to check whether it the query executes successfully
 
     $res = mysqli_query($conn, $sql);
-
+    
     if ($res) {
         // Create a session variable to display the status of query execution
         $_SESSION['add_category'] = "Category Added Successfully!";

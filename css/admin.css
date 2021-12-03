@@ -157,6 +157,12 @@ h3 {
   padding: 1%;
 }
 
+/* CSS for displaying current image in update section */
+#current-image{
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
 /* 
 CSS for Action Buttons 
 btn-primary - blue
