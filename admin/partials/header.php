@@ -23,7 +23,7 @@ include('login-check.php');
                 <span class="material-icons">admin_panel_settings</span>
                 <a href=<?php echo  SITEURL . "admin/manage-admin.php"?>>Admin</a>
                 <a href=<?php echo  SITEURL . "admin/manage-categories.php"?>>categories</a>
-                <a href=<?php echo  SITEURL . "admin/manage-food.php"?>>food</a>
+                <a href=<?php echo  SITEURL . "admin/manage-plant.php"?>>plant</a>
                 <a href=<?php echo  SITEURL . "admin/manage-order.php"?>>order</a>
                 <a href=<?php echo  SITEURL . "admin/logout.php"?>>Log Out</a>
             </div>

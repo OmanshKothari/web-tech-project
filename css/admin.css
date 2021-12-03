@@ -157,6 +157,10 @@ h3 {
   padding: 1%;
 }
 
+.main-content table tr td img{
+  padding: 1%;
+  border-radius: 50%;
+}
 /* CSS for displaying current image in update section */
 #current-image{
   width: 50%;
