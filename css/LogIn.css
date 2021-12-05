@@ -1,0 +1,129 @@
+html {
+    height: 100%;
+  }
+
+body{
+    height: 100%;
+    text-align: center;
+}
+
+.bg-image{
+    background-image: url("/img/Nursery.jpg");
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box{
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    background: rgb(115, 115, 115, 0.50);
+    border: 0.900125px solid #C4C4C4;
+    box-sizing: border-box;
+    box-shadow: 0px 3.6005px 3.6005px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3.6005px);
+    border-radius: 18.0025px;
+    
+}
+
+.form{
+    z-index: 3;
+    height: 350px;
+    text-align: left;
+
+}
+
+.SignUp, .Go{
+    text-align: center;
+}
+
+.SignUp{
+    font-family: 'Sunflower', sans-serif;
+    font-style: normal;
+    font-weight: 150;
+    font-size: 35px;
+    line-height: 72px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 12px;
+    opacity: 0.7;
+}
+
+.form-input{
+    z-index: 5;
+    width : 250px;
+    background: #C4C4C4;
+    opacity: 0.7;
+    border-color: #C4C4C4;
+    border-radius: 8px;
+    padding: 10px;
+    padding-top: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: 'Sunflower', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.button{
+    font-family: 'Sunflower', sans-serif;
+    width:100px;
+    height:45px;
+    background: #C4C4C4;
+    opacity: 0.5;
+    border-radius: 9.00125px;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+::placeholder{
+    font-family: 'Sunflower', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.login{
+    font-family: 'Sunflower';
+    font-weight: lighter;
+    font-size: 15px;
+    color: #FFFFFF;
+    opacity: 0.4;
+    margin-bottom: 10px;
+}
+a:link {
+    font-family: 'Sunflower';
+    color: #FFFFFF;
+    opacity: 0.9;
+  }
+
+a:visited {
+    font-family: 'Sunflower';
+    color: black;
+    opacity: 0.9;
+  }
+  a:hover {
+    font-family: 'Sunflower';
+    color: whitesmoke;
+    opacity: 0.9;
+  }
+
+.cross{
+    text-align: right;
+}
+
+.x{
+    border-radius: 40px;
+    opacity: 0.4;
+    width: 30px;
+    height: 30px;
+}

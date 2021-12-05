@@ -1,0 +1,150 @@
+body{
+    height: 100%;
+    background-color: #2B7C85;
+}
+.top-heading{
+    position:sticky;
+    font-family: Sunflower;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 90px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.menu-buttons{
+    width: 100%;
+    text-align: right;
+    border:2px;
+    margin-top: -7%;
+    margin-bottom: 20px;
+
+}
+.buttons{
+    font-family: Sunflower;
+    font-size: 25px;
+    font-weight:250px;
+    background-color: white;
+    color: teal;
+    width: 150px;
+    height: 48px;
+    border-radius: 30px;
+    margin-right: 15px ;
+
+}
+
+.shop-menu{
+    background: #FFFFFF;
+    border-radius: 70px;
+    border:2px;
+    margin-top: 20px;
+}
+
+
+.menu-bar{
+
+    position: sticky;
+    display: flex;
+    list-style-type:none;
+    font-family: Sunflower;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: 60px;
+
+
+}
+
+
+.menu-bar li a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 26px 60px;
+    text-decoration: none;
+    margin-left: 85px;
+  }
+
+  .menu-bar li a.hover {
+    border-bottom: 3px solid gray;
+  }
+
+
+   .menu-bar li a.active {
+    border-bottom: 3px solid teal;
+  }
+
+.rect{
+    display: flex;
+    margin-left: 60px;
+}
+
+  .teal-rect{
+    display: block;
+    width: 100px;
+    height: 6px;
+    background:#C4C4C4;
+    padding: 26px 60px
+  }
+
+
+.Single-plant{
+
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 350px;
+    justify-content: space-evenly;
+}
+
+
+.grid-item{
+    background: #C4C4C4;
+    border-radius: 40px;
+    width: 200px;
+    height:240px;
+    padding: 5px;
+}
+
+.plant-info{
+    font-family: Sunflower;
+    font-size: 20px;
+    font-weight:250px;
+    text-align: center;
+    margin-top: -40px;
+    padding: 10px;
+}
+
+.buttons2{
+
+    font-family: Sunflower;
+    font-size: 25px;
+    font-weight:250px;
+    background-color: teal;
+    color: white;
+    width: 110px;
+    height: 38px;
+    border-radius: 30px;
+   
+}
+.plant{
+    margin-top: -60px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(90, 88, 88, 50);
+  }
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: teal; 
+  }
