@@ -1,18 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "Omansh@123";
-$dbname = "nursery";
-
-// making connection 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-if (!$conn) {
-  die("Can not establish connection" . mysqli_connect_error());
-}
-?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
