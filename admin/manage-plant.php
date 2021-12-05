@@ -17,6 +17,11 @@ include('partials/header.php')
                 unset($_SESSION['add_plant']);
                 // Removes the variable from the session variables so that message is displayed only once
             }
+            if (isset($_SESSION['update'])) {
+                echo $_SESSION['update']; // Displaying Session Message
+                unset($_SESSION['update']);
+                // Removes the variable from the session variables so that message is displayed only once
+            }
             if (isset($_SESSION['delete'])) {
                 $class = $_GET['class'];
                 echo "<h3 class='$class'>" . $_SESSION['delete'] . "</h3>"; // Displaying Session Message
@@ -92,7 +97,7 @@ include('partials/header.php')
                         <td><?php echo $featured; ?></td>
                         <td><?php echo $active; ?></td>
                         <td>
-                            <a href="#" class="btn-secondary">Update Plant</a>
+                            <a href="<?php echo SITEURL; ?>admin/update-plant.php?id=<?php echo $id ?>&image_name=<?php echo $image_name ?>" class="btn-secondary">Update Plant</a>
                             <a href="<?php echo SITEURL; ?>admin/delete-plant.php?id=<?php echo $id ?>&image_name=<?php echo $image_name ?>" class="btn-danger">Delete Plant</a>
                         </td>
                     </tr>

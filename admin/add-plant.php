@@ -31,7 +31,7 @@ include('partials/header.php')
                 <tr>
                     <td>Description : </td>
                     <td>
-                        <textarea rows="10" cols="60" name="description" placeholder="Enter Plant Description " required></textarea>
+                        <textarea rows="5" cols="40" name="description" placeholder="Enter Plant Description " required></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -42,7 +42,7 @@ include('partials/header.php')
                     </td>
                 </tr>
                 <tr>
-                    <td>Image name : </td>
+                    <td>Image : </td>
                     <td>
                         <input type="file" name="image_name" required>
                     </td>
