@@ -1,14 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html {
     height: 100%;
+    font-size: 62.5%;
   }
 
 body{
+    position: sticky;
     height: 100%;
     text-align: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/Nursery.jpg");
+    background-color: rgba(65, 65, 65, 0.5);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    place-items: center; 
 }
 
-.bg-image{
-    background-image: url("/img/Nursery.jpg");
+
+/* .bg-image{
+    background-image: url("img/Nursery.jpg");
     filter: blur(5px);
     -webkit-filter: blur(5px);
     height: 100%;
@@ -16,9 +33,9 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
-.box{
+/* .box{
     z-index: 2;
     position: absolute;
     top: 50%;
@@ -33,71 +50,65 @@ body{
     border-radius: 18.0025px;
     
 }
-
+*/
 .form{
-    z-index: 3;
-    height: 400px;
-    text-align: left;
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+}
 
+.form form{
+    background:rgba(245, 245, 245, 0.5);
+    width: 40%;
+    margin: 0 auto;
+    border: 2px solid teal;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.form form h3{
+    font-size: 3rem;
 }
 
 .SignUp, .Go{
     text-align: center;
 }
 
-.SignUp{
+
+form input{
+    width : 25rem;
+    background: #eee;
+    border-color: teal;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem auto;
     font-family: 'Sunflower', sans-serif;
-    font-style: normal;
-    font-weight: 150;
-    font-size: 35px;
-    line-height: 72px;
-    text-align: center;
-    color: #FFFFFF;
-    margin-top: 12px;
-    opacity: 0.7;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
-.form-input{
-    z-index: 5;
-    width : 200px;
-    background: #C4C4C4;
-    opacity: 0.7;
-    border-color: #C4C4C4;
-    border-radius: 8px;
-    padding: 10px;
-    padding-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    font-family: 'Sunflower', sans-serif;
-    font-weight: 100;
-    font-size: 18px;
+#submit{
+    cursor: pointer;
+    width: max-content;
+    font-size: 2rem;
+    padding: 0 2rem;
 }
 
-.button{
-    font-family: 'Sunflower', sans-serif;
-    width:100px;
-    height:45px;
-    background: #C4C4C4;
-    opacity: 0.5;
-    border-radius: 9.00125px;
-    font-size: 25px;
-    margin-top: 15px;
+#submit:hover{
+    background-color: teal;
 }
 
 ::placeholder{
     font-family: 'Sunflower', sans-serif;
-    font-weight: 100;
-    font-size: 20px;
+    font-weight: 200;
+    font-size: 2rem;
 }
 
 .login{
     font-family: 'Sunflower';
-    font-weight: lighter;
+    font-weight: bold;
     font-size: 15px;
-    color: #FFFFFF;
-    opacity: 0.4;
+    color: black;
     margin-bottom: 10px;
 }
 a:link {
@@ -124,4 +135,4 @@ a:link {
     opacity: 0.4;
     width: 30px;
     height: 30px;
-}
+} 

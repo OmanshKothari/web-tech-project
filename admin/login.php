@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login : Plant Mart</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/admin-login.css">
 </head>
 
 <body>
@@ -54,7 +54,7 @@
             if($count == 1){
                 // USER CONFIRMED
                 $_SESSION['login-msg'] = "<div class='success'>You Logged in Successfully!!</div>";
-                $_SESSION['user'] = $username;
+                $_SESSION['admin'] = $username;
                 // Redirect to home page
                 header('location:'.SITEURL.'admin/index.php');
             }

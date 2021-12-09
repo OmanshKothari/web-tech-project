@@ -1,0 +1,72 @@
+*::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1.6;
+}
+
+.card-box{
+    min-height: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center;
+    font-size: 1.5rem;
+}
+
+.card-item{
+    max-width: 35ch;
+    color: white;
+    background-image: url('../img/fern.png');
+    background-size: cover;
+    background-position: center;
+    outline: 2px solid black;
+    padding: 10rem 0 0;
+}
+
+.card-content{
+    --padding: 1.5em;
+    padding: var(--padding);
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.3) 20%,
+        hsl(0 0% 0% / 1)
+    );
+}
+ 
+.card-title{
+    font-size: 2em;
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after{
+    content: '';
+    position: absolute;
+    left: calc(0.8em * -1);
+    bottom: 0;
+    height: 4px;
+    width: calc(100% + var(--padding));
+    background-color: blue;
+}
+
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: forestgreen;
+    padding: 0.5em 1.25em;
+}
+
+.button:hover {
+    background-color: rgb(254, 255, 255);
+}
+
+#explore{
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    
+}

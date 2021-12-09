@@ -8,13 +8,12 @@
     </div>
 
     <div class="links">
-      <a href="#home">home</a>
-      <a href="#about">about</a>
-      <a href="#menu">menu</a>
-      <a href="#products">products</a>
-      <a href="#review">review</a>
-      <a href="#contact">contact</a>
-      <a href="#blogs">blogs</a>
+      <a href="<?php echo SITEURL . '#home' ?>">home</a>
+      <a href="<?php echo SITEURL . '#about' ?>">about</a>
+      <a href="<?php echo SITEURL . '#menu' ?>">menu</a>
+      <a href="<?php echo SITEURL . '#contact' ?>">contact</a>
+      <a href="<?php echo SITEURL . 'LogIn.php' ?>">LogIn</a>
+      <a href="<?php echo SITEURL . 'user-logout.php' ?>">LogOut</a>
     </div>
 
     <div class="credit">created by <span>TEAM</span> | all rights reserved</div>

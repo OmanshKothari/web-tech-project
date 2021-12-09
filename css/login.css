@@ -1,104 +1,128 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
-
-* {
-  font-family: "Roboto", sans-serif;
-  color: #000;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  transition: 0.2s linear;
+html {
+  height: 100%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+  text-align: center;
 }
 
 .bg-image {
-  background-image: url("../images/photo-1592150621744-aca64f48394a.jfif");
+  background-image: url("../img/Nursery.jpg");
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  height: 100%;
+  width: 100%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
-.filter-blur {
-  background: rgba(240, 227, 227, 0.05);
-  backdrop-filter: blur(8px);
+.box {
+  z-index: 2;
   position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  background: rgb(115, 115, 115, 0.5);
+  border: 0.900125px solid #c4c4c4;
+  box-sizing: border-box;
+  box-shadow: 0px 3.6005px 3.6005px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3.6005px);
+  border-radius: 18.0025px;
+}
+
+.form {
+  z-index: 3;
+  height: 350px;
+  text-align: left;
+}
+
+.SignUp,
+.Go {
+  text-align: center;
+}
+
+.SignUp {
+  font-family: "Sunflower", sans-serif;
+  font-style: normal;
+  font-weight: 150;
+  font-size: 35px;
+  line-height: 72px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 12px;
+  opacity: 0.7;
+}
+
+.form-input {
+  z-index: 5;
+  width: 250px;
+  background: #c4c4c4;
+  opacity: 0.7;
+  border-color: #c4c4c4;
+  border-radius: 8px;
+  padding: 10px;
+  padding-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: "Sunflower", sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.button {
+  font-family: "Sunflower", sans-serif;
+  width: 100px;
+  height: 45px;
+  background: #c4c4c4;
+  opacity: 0.5;
+  border-radius: 9.00125px;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+::placeholder {
+  font-family: "Sunflower", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
 }
 
 .login {
-  position: absolute;
-  width: 500px;
-  height: 420px;
+  font-family: "Sunflower";
+  font-weight: lighter;
+  font-size: 15px;
+  color: #ffffff;
+  opacity: 0.4;
+  margin-bottom: 10px;
+}
+a:link {
+  font-family: "Sunflower";
+  color: #ffffff;
+  opacity: 0.9;
+}
 
-  background: #c4c4c4;
-  opacity: 0.6;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  /* backdrop-filter: blur(4px); */
-  /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 20px;
-  margin: 10% auto 0 auto;
-  padding: 10px;
-  position: relative;
-  z-index: 2;
-  text-align: center;
+a:visited {
+  font-family: "Sunflower";
   color: black;
+  opacity: 0.9;
+}
+a:hover {
+  font-family: "Sunflower";
+  color: whitesmoke;
+  opacity: 0.9;
 }
 
-.login h1{
-    margin:2% auto 5% auto;
-    font-size: 2.5rem;
-    line-height: 80px;
-    font-weight: 300;
+.cross {
+  text-align: right;
 }
 
-#submit{
-    width: 25%;
-    margin: 3% auto;
-    background: forestgreen;
-    font-weight: 500;
-    font-size: 28px;
-    opacity: 1;
-    z-index: 3;
-    color: #fff;
-}
-
-#submit:hover{
-    background-color: #577BC1;
-}
-
-.login input {
-  font-size: larger;
-  width: 420px;
-  height: 66px;
-  background: #fff;
-  border: 1px solid black;
-  border-radius: 10px;
-  margin: 1%;
-  padding: 1%;
-}
-
-.failure{
-    margin-top: 0;
-    font-size: 1.2rem;
-    color: rgb(228, 22, 22);
-    margin-bottom: 2.5%;
+.x {
+  border-radius: 40px;
+  opacity: 0.4;
+  width: 30px;
+  height: 30px;
 }

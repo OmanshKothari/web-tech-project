@@ -1,4 +1,7 @@
-
+<?php
+  ob_start();
+  include('config/constants.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +14,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!-- custom css file link  -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/my-style.css" />
+  <link rel="stylesheet" href="css/plant-grid.css">
 </head>
 
 <body>
@@ -23,13 +27,12 @@
     </a>
     <!-- navbar starts here -->
     <nav class="navbar">
-      <a href="#home">home</a>
-      <a href="#about">about</a>
-      <a href="#menu">menu</a>
-      <a href="#products">products</a>
-      <a href="#review">review</a>
-      <a href="#contact">contact us</a>
-      <a href="#blogs">blogs</a>
+      <a href="<?php echo SITEURL ?>#home">home</a>
+      <a href="<?php echo SITEURL ?>#about">about</a>
+      <a href="<?php echo SITEURL ?>#menu">Products</a>
+      <a href="<?php echo SITEURL ?>#contact">contact us</a>
+      <a href="<?php echo SITEURL ?>LogIn.php">Login</a>
+      <a href="<?php echo SITEURL ?>user-logout.php">LogOut</a>
     </nav>
 
     <!-- icons here-->
@@ -48,31 +51,29 @@
     <!-- cart-items-container starts here -->
 
     <div class="cart-items-container">
-      <div class="cart-item">
-        <span class="fas fa-times"> </span>
-        <img src="images/logo.png" alt="item-1" />
-        <div class="content">
-          <h3>cart-item-1</h3>
-          <div class="price">$15.99/-</div>
-        </div>
-      </div>
-      <div class="cart-item">
-        <span class="fas fa-times"> </span>
-        <img src="images/logo.png" alt="item-2" />
-        <div class="content">
-          <h3>cart-item-2</h3>
-          <div class="price">$15.99/-</div>
-        </div>
-      </div>
-      <div class="cart-item">
-        <span class="fas fa-times"> </span>
-        <img src="images/logo.png" alt="item-3" />
-        <div class="content">
-          <h3>cart-item-3</h3>
-          <div class="price">$15.99/-</div>
-        </div>
-      </div>
-      <a href="#" class="btn">Checkout Now</a>
+      <!-- SQL query to get all card items -->
+      <?php 
+        $sql = "SELECT * FROM tb_cart";
+        $res = mysqli_query($conn, $sql);
+        $count_rows = mysqli_num_rows($res);
+        if($count_rows >= 1){
+          while($row=mysqli_fetch_assoc($res)){
+            $id = $row['idtb_cart'];
+            $title = $row['title'];
+            $price = $row['price'];
+            $img_name = $row['image_name'];
+          
+            echo "<div class='cart-item'>";
+            echo "<a href='delete-cart-item.php?id=". $id ."&p=". 'index' ."'<span class='fas fa-times'> </span></a>";
+            echo "<img src='images/plants/". $img_name ."' alt='item-1' />";
+            echo "<div class='content'>";
+            echo "<h3>". $title ."</h3>";
+            echo "<div class='price'>₹". $price ."/-</div>";
+            echo "</div>";
+            echo "</div>";
+          }
+        }
+      ?>
     </div>
   </header>
   <!-- header section ends -->

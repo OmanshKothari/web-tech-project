@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image {
+  background-image: url("../images/photo-1592150621744-aca64f48394a.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.filter-blur {
+  background: rgba(115, 115, 115, 0.05);
+  backdrop-filter: blur(8px);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.login {
+
+  background: #c4c4c4;
+  opacity: 0.6;
+  box-shadow: 0px 4px 4px rgba(117, 117, 107, 0.25);
+  /* backdrop-filter: blur(4px); */
+  /* Note: backdrop-filter has minimal browser support */
+  width: 40%;
+  height: 55%;
+  border-radius: 20px;
+  margin: 10% auto 0 auto;
+  padding: 0.5rem;
+  z-index: 2;
+  text-align: center;
+  color: black;
+}
+
+
+.login h1{
+    margin:2% auto 5% auto;
+    margin-left: -15%;
+    font-size: 2.5rem;
+    line-height: 80px;
+    font-weight: 400;
+}
+
+#submit{
+    display: block;
+    width: 25%;
+    max-height: 5rem;
+    margin: 3% auto;
+    background: forestgreen;
+    font-weight: 500;
+    font-size: 1.8rem;
+    opacity: 1;
+    z-index: 3;
+    color: #fff;
+}
+
+#submit:hover{
+    background-color: #577BC1;
+}
+
+.login input {
+  font-size: larger;
+  width: 25rem;
+  min-height: 3.6rem;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 1%;
+  padding: 1%;
+}
+
+.login label{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.login a{
+  font-size: 1.2rem;
+  font-weight: 450;
+  margin: 1rem;
+  padding: 0.4rem;
+  background-color: teal;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.login a:hover{
+  background-color: aquamarine;
+}
+
+.failure{
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: rgb(228, 22, 22);
+    margin-bottom: 2.5%;
+}

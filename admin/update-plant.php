@@ -14,7 +14,7 @@ else{
 
     // Get all the record for the plant
 
-    $sql = "SELECT * FROM tb_food WHERE id = $plant_id";
+    $sql = "SELECT * FROM tb_plant WHERE id = $plant_id";
 
     $res = mysqli_query($conn, $sql);
 
@@ -27,6 +27,8 @@ else{
 
         $title = $row['title'];
         $desc = $row['description'];
+        $caring_ins = $row['caring_instructions'];
+        $toxicity = $row['toxicity'];
         $price = $row['price'];
         $category_id = $row['category_id'];
         $featured = $row['featured'];
@@ -70,6 +72,18 @@ else{
                     <td>Description : </td>
                     <td>
                         <textarea name="description" cols="30" rows="5"><?php echo $desc; ?></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Caring Instructions : </td>
+                    <td>
+                        <textarea name="caring_instructions" cols="30" rows="5"><?php echo $caring_ins; ?></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Toxicity : </td>
+                    <td>
+                        <textarea name="toxicity" cols="30" rows="5"><?php echo $toxicity; ?></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -159,6 +173,8 @@ if(isset($_POST['submit'])){
     $current_plant_image = $_POST['current_image'];
     $title = $_POST['title'];
     $desc = $_POST['description'];
+    $caring_ins = $_POST['caring_instructions'];
+    $toxicity = $_POST['toxicity'];
     $price = $_POST['price'];
     $featured = $_POST['featured'];
     $active = $_POST['active'];
@@ -201,9 +217,11 @@ if(isset($_POST['submit'])){
             $image_name = $current_plant_image;
         }
 
-        $sql3 = "UPDATE tb_food SET 
+        $sql3 = "UPDATE tb_plant SET 
                 title = '$title',
                 description = '$desc',
+                caring_instructions = '$caring_ins',
+                toxicity = '$toxicity',
                 price = $price,
                 image_name = '$image_name',
                 featured = '$featured',

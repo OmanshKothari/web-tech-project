@@ -24,7 +24,7 @@
     }
 
     // 2. Create a sql query to delete food
-    $sql = "DELETE FROM tb_food WHERE id = $id";
+    $sql = "DELETE FROM tb_plant WHERE id = $id";
     // Executing query
     $res = mysqli_query($conn, $sql);
     // 3. Redirect to manage-food.php page with message("Success or Error")

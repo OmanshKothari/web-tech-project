@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 use function PHPSTORM_META\type;
 
 include('partials/header.php')
@@ -28,10 +28,28 @@ include('partials/header.php')
                     </td>
                 </tr>
                 <tr>
+                <tr class="failure">
+                    <td>Note : </td>
+                    <td>Please make sure to not add any : &lt;"/'&gt; in the text.</td>
+                </tr>
                 <tr>
                     <td>Description : </td>
                     <td>
                         <textarea rows="5" cols="40" name="description" placeholder="Enter Plant Description " required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>Caring Instructions : </td>
+                    <td>
+                        <textarea rows="5" cols="40" name="caring_instructions" placeholder="Enter Caring Instructions for plant " required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>Toxicity : </td>
+                    <td>
+                        <textarea rows="5" cols="40" name="toxicity" placeholder="Enter Plant Toxicity " required></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -91,7 +109,7 @@ include('partials/header.php')
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" name="submit" value="Add Food" class="btn-primary">
+                        <input type="submit" name="submit" value="Add Plant" class="btn-primary">
                     </td>
                 </tr>
             </table>
@@ -112,6 +130,8 @@ if (isset($_POST['submit'])) {
 
     $title = $_POST['title'];
     $description = $_POST['description'];
+    $caring_instructions = $_POST['caring_instructions'];
+    $toxicity = $_POST['toxicity'];
     $price = $_POST['price'];
     $category_id = $_POST['category_id'];
     $featured = $_POST['featured'];
@@ -142,9 +162,11 @@ if (isset($_POST['submit'])) {
 
     // SQL query to save Data in Database
 
-    $sql = "INSERT INTO tb_food SET
+    $sql = "INSERT INTO tb_plant SET
             title = '$title',
             description = '$description',
+            caring_instructions = '$caring_instructions',
+            toxicity = '$toxicity',
             price = '$price',
             image_name = '$image_name',
             category_id = '$category_id',
@@ -165,7 +187,7 @@ if (isset($_POST['submit'])) {
         header('location:' . SITEURL . 'admin/manage-plant.php');
     } else {
         // Create a session variable to display the status of query execution
-        $_SESSION['add_plant'] = "Failed to Add Plant!";
+        $_SESSION['add_plant'] = "Failed to Add Plant!" . mysqli_error($conn);
         // REDIRECT PAGE to same page
         header('location:' . SITEURL . 'admin/add-plant.php');
     }

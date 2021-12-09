@@ -135,6 +135,10 @@ h3 {
 
 /* CSS for tables [to display records in each admin-page] */
 
+#customer_messages{
+  margin: 2rem 0 2rem 5rem;
+}
+
 .main-content table {
   background-color: #ccc;
   opacity: 0.9;
@@ -238,10 +242,6 @@ btn-danger - red
 }
 
 /* CSS for order table */
-
-#tb-order {
-  font-size: 0.5rem;
-}
 
 .success {
   width: 50%;

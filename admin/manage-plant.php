@@ -37,6 +37,8 @@ include('partials/header.php')
                 <th>S.No.</th>
                 <th>Title</th>
                 <th>Description</th>
+                <th>Caring Instructions</th>
+                <th>Toxicity</th>
                 <th>Price</th>
                 <th>Image</th>
                 <th>Category</th>
@@ -46,7 +48,7 @@ include('partials/header.php')
             </tr>
             <?php
             // SQL query to get all the rows from database
-            $sql = "SELECT * FROM tb_food";
+            $sql = "SELECT * FROM tb_plant";
             // Executing the query
             $res = mysqli_query($conn, $sql);
             // Counting the number of rows in database
@@ -66,6 +68,8 @@ include('partials/header.php')
                     $id = $rows['id'];
                     $title = $rows['title'];
                     $description = $rows['description'];
+                    $caring_ins = $rows['caring_instructions'];
+                    $toxicity = $rows['toxicity'];
                     $price = $rows['price'];
                     $image_name = $rows['image_name'];
                     $category_id = $rows['category_id'];
@@ -90,7 +94,9 @@ include('partials/header.php')
                     <tr>
                         <td><?php echo $sn; ?></td>
                         <td><?php echo $title; ?></td>
-                        <td><?php echo $description; ?></td>
+                        <td><?php echo substr($description, 0, 50) . '...'; ?></td>
+                        <td><?php echo substr($caring_ins, 0, 50) . '...'; ?></td>
+                        <td><?php echo substr($toxicity, 0, 50) . '...'; ?></td>
                         <td><?php echo $price; ?></td>
                         <td><img src="../images/plants/<?php echo $image_name; ?>" alt="<?php echo $image_name; ?>" width="100px" height="100px"></td>
                         <td><?php echo $category; ?></td>

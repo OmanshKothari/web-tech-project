@@ -1,0 +1,704 @@
+@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@1,700&display=swap");
+
+:root {
+  --main-color: #499fa4;
+  --black: #2b7c85;
+  --bg: #00ff8b;
+  --border: 0.1rem solid rgba(73, 159, 164, 0.3);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
+}
+
+body {
+  background: #ccc;
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.heading {
+  text-align: center;
+  /* color: #fff; */
+  text-transform: uppercase;
+  font-size: 5em;
+  margin-bottom: 5rem;
+}
+
+.heading span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--main-color);
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+.btn:hover,
+.btn:focus {
+  letter-spacing: 0.2rem;
+}
+
+.more {
+  margin: 0 auto;
+}
+
+.header {
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header .logo img {
+  border-radius: 50px;
+  height: 6rem;
+}
+
+.header .navbar a {
+  text-decoration: none;
+  margin: 0.1rem;
+  font-size: 1.6rem;
+  color: white;
+  margin-right: 2.5rem;
+}
+
+.header .navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+  padding-bottom: 0.5rem;
+}
+
+.header .icons div {
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+
+.header .icons div:hover {
+  color: var(--main-color);
+}
+
+.header .search-form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  border: 2px solid #13292a;
+  border-radius: 3rem;
+  overflow: hidden;
+  transform: scaleY(0);
+  transition: transform 200ms ease-out;
+  transform-origin: top;
+}
+
+.header .search-form.active {
+  transform: scaleY(1);
+}
+
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--black);
+  padding: 1rem;
+  text-transform: none;
+}
+
+.header .search-form label {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: var(--black);
+}
+
+.header .search-form label:hover {
+  color: var(--main-color);
+}
+
+.header .cart-items-container {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: calc(100vh - 9.5rem);
+  width: 35rem;
+  border: 2px solid #13292a;
+  border-radius: 3rem;
+  background: #fff;
+  padding: 0 1.5rem;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+.header .cart-items-container.active {
+  right: 1.5%;
+}
+
+.header .cart-items-container .cart-item {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item img {
+  width: 25%;
+  height: 20%;
+}
+
+.header .cart-items-container .cart-item .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover {
+  color: var(--main-color);
+}
+
+.header .cart-items-container .btn {
+  width: 100%;
+  text-align: center;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7)
+    url(../images/vadim-kaipov-8ZELrodSvTc-unsplash.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+}
+
+.home .content {
+  margin: 2rem 0;
+  max-width: 70%;
+  padding: 10rem 5rem;
+}
+
+.home .content h3 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.home .content p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #eee;
+}
+/* My about css */
+
+.about {
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+
+.about .row-about,
+.contact .row-about {
+  display: flex;
+  background: #eee;
+  padding: 2rem;
+  border-radius: 3rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.about .reverse {
+  flex-direction: row-reverse;
+}
+
+.about .row-about > *:nth-child(1),
+.contact .row-about > *:nth-child(1) {
+  flex: 1 1 20%;
+}
+
+.about .row-about .image img,
+.contact .row-about .image img {
+  border: 2px solid teal;
+  border-radius: 60px;
+}
+
+.about .row-about > *:nth-child(2),
+.contact .row-about > *:nth-child(2) {
+  flex: 1 1 60%;
+}
+
+.about .row-about .content h3,
+.contact .row-about .content h3 {
+  font-size: 4em;
+  font-weight: lighter;
+  /* color: #fff; */
+}
+
+.about .row-about .content p,
+.contact .row-about .content p {
+  font-size: 1.8rem;
+  /* color: #ccc; */
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+
+.menu {
+  background-color: #eee;
+  border-radius: 3rem;
+  margin-bottom: 2rem;
+}
+
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  background-color: #13292a;
+  padding: 2rem;
+}
+
+.menu .box-container .box {
+  padding: 5rem 0 1rem 0;
+  text-align: center;
+  border: var(--border);
+  border-radius: 0.5em;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+
+.menu .box-container .box:hover {
+  transform: scale(1.05);
+}
+
+.menu .box-container .box img {
+  max-height: 18rem;
+}
+
+.menu .box-container .box .content {
+  margin-top: 12em;
+  color: white;
+  padding: 5em 2rem 0 2rem;
+  height: 100%;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0.3),
+    hsl(0 0% 0% / 0.5) 20%,
+    hsl(0 0% 0% / 1)
+  );
+}
+
+@media (hover) {
+  .menu .box-container .box .content {
+    transform: translateY(35%);
+    transition: transform 500ms ease;
+  }
+  .menu .box-container .box .content > *:not(h2) {
+    opacity: 0;
+    transition: opacity 1000ms linear;
+    transition-delay: 600ms;
+  }
+  .menu .box-container .box:hover .content > *:not(h2) {
+    opacity: 1;
+  }
+
+  .menu .box-container .box:hover .content {
+    transform: translateY(0%);
+    transition-delay: 500ms;
+  }
+  .menu .box-container .box h2::after {
+    transform: scaleX(0);
+  }
+}
+
+.menu .box-container .box h2 {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.menu .box-container .box h2::after {
+  content: "";
+  height: 4px;
+  background-color: forestgreen;
+  width: calc(100%);
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  transition: transform 500ms ease;
+}
+
+.menu .box-container .box:hover h2::after {
+  transform: scaleX(1);
+}
+
+.menu .box-container .box .price {
+  font-size: 2rem;
+  padding: 2em 0 0;
+}
+
+.menu .box-container .box .price span {
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+}
+
+#button {
+  margin: 2rem 42% 2rem 43% !important;
+  place-self: center;
+  width: max-content;
+  font-size: 2rem;
+  transition: transform 500ms ease;
+}
+
+#button:hover {
+  color: #13292a;
+  letter-spacing: 0.05rem;
+  transform: scaleX(1.05);
+  transform-origin: center;
+}
+
+/* .menu .box-container .box:hover{
+    background: #fff;
+}
+
+.menu .box-container .box:hover .content> *{
+    color: var(--black);
+} */
+
+.contact {
+  background-color: #ccc;
+  border-radius: 3rem;
+  margin-bottom: 2rem;
+}
+
+.contact .row {
+  display: flex;
+  background: #13292a;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form h3 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+.contact .row form .inputBox {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--black);
+  border: var(--border);
+}
+
+.contact .row form .inputBox span {
+  color: #fff;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.contact .row form .inputBox input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+}
+
+.contact .row form .inputBox input::placeholder {
+  color: white;
+}
+
+.footer {
+  background: var(--black);
+  text-align: center;
+}
+
+.footer .share {
+  padding: 1rem 0;
+}
+
+.footer .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  border: var(--border);
+  border-radius: 50%;
+  margin: 0.3rem;
+  background-color: #13292a;
+}
+
+.footer .share a:hover {
+  background-color: var(--main-color);
+}
+
+.footer .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.footer .links a {
+  padding: 0.7rem 2rem;
+  color: white;
+  border: 0.5px solid #13292a;
+  font-size: 2rem;
+}
+
+.footer .links a:hover {
+  background: var(--main-color);
+}
+
+.footer .credit {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: lighter;
+  padding: 1.5rem;
+}
+
+.footer .credit span {
+  color: #13292a;
+}
+
+/* CSS for displaying current image in update section */
+.main-content .box-container{
+    margin-top: 15rem;
+}
+
+.main-content .box-container h2{
+    width: max-content;
+    margin: 0 auto;
+    font-size: 4rem;
+    line-height: 2rem;
+}
+
+#current-image {
+  display: flex;
+  justify-content: center;
+  width: 25rem;
+  margin: 0 auto;
+  height: 30rem;
+  border: 1px solid teal;
+  border-radius: 3rem;
+}
+
+/* CSS for adding admin form */
+
+#manage-form {
+  text-transform: none;
+}
+
+.main-content .box-container form{
+    border: 2px solid teal;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    background-color: #b1e693;
+    width: 80%;
+    margin: -3rem auto 0 auto;
+}
+
+.main-content .box-container form table {
+  width: 80%;
+  font-size: 1.8rem;
+  text-align: right;
+  margin: 2rem auto;  
+  /* padding: 1%; */
+}
+
+.main-content .box-container form table td{
+    padding: 0.5rem;
+}
+
+.main-content .box-container form table th{
+    padding: 2rem 0;
+}
+
+form table td input{
+    padding: 1px 0.3rem;
+}
+
+/* CSS for order table */
+
+#tb-order {
+  font-size: 0.5rem;
+}
+
+.success {
+font-size: 1.5rem;
+  width: 50%;
+  margin: 1rem auto;
+  color: #000;
+  padding: 1%;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #7fffd4;
+}
+
+.failure {
+  font-size: 1.5rem;
+  width: 50%;
+  margin: 1rem auto;
+  color: #000;
+  padding: 3rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #ff7518;
+}
+
+/* media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
+  }
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  .header .navbar a {
+    color: var(--black);
+    display: block;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .header .search-form {
+    width: 90%;
+    right: 2rem;
+    text-align: center;
+  }
+
+  .home {
+    background-position: left;
+    justify-content: center;
+  }
+
+  .home .content h3 {
+    font-size: 4.5rem;
+  }
+
+  .home .content p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+}

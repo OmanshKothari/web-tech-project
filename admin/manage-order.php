@@ -33,7 +33,6 @@ include('partials/header.php')
                 <th>Customer Contact</th>
                 <th>Customer Email</th>
                 <th>Customer Address</th>
-                <th>Actions</th> <!-- This will have buttons like update, remove etc. -->
             </tr>
             <?php
             // SQL query to get all the rows from database
@@ -55,7 +54,7 @@ include('partials/header.php')
                     // Getting the data
 
                     $id = $rows['id'];
-                    $food = $rows['food'];
+                    $food = $rows['plant'];
                     $price = $rows['price'];
                     $qty = $rows['qty'];
                     $order_date = $rows['order_date'];
@@ -81,10 +80,6 @@ include('partials/header.php')
                         <td><?php echo $customer_contact; ?></td>
                         <td><?php echo $customer_email; ?></td>
                         <td><?php echo $customer_address; ?></td>
-                        <td>
-                            <a href="#" class="btn-secondary">Update Category</a>
-                            <a href="<?php echo SITEURL; ?>admin/delete-order.php?id=<?php echo $id ?>" class="btn-danger">Delete Category</a>
-                        </td>
                     </tr>
             <?php
                     $sn++;
